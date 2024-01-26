@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+
+    .heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .gallery-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      animation: drop-in 0.6s ease-out;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes drop-in {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-card img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+
+    .gallery-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .drawer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      transition: height 0.7s smooth ease-in-out;
+    }
+
+    .drawer p {
+      color: white;
+    }
+
+    .gallery-card:hover .drawer {
+      height: 70px;
+    }
+
+    .drawer-content {
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+
+  <title>Photo Gallery</title>
+</head>
+<body>
+
+    <div class="heading">Photo Gallery</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="sunset.jpg" alt="sunset">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+              <p class="title is-5">Sunset Serenity</p>
+              <p class="subtitle is-6">Captured by Jane Doe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="mountains.jpg" alt="mountains">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Majestic Mountains</p>
+                <p class="subtitle is-6">Captured by John Smith</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 3 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="lake.jpg" alt="lake">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Tranquil Lake</p>
+                <p class="subtitle is-6">Captured by Emily White</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 4 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="enchanted forest.jpg" alt="Photo 4">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Enchanted Forest</p>
+                <p class="subtitle is-6">Captured by Alex Johnson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 5 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="coastal.jpg" alt="Photo 5">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Coastal Bliss</p>
+                <p class="subtitle is-6">Captured by Sarah Brown</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 6 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="field of gold.jpg" alt="Photo 6">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Fields of Gold</p>
+                <p class="subtitle is-6">Captured by Michael Green</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="city.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">City Lights</p>
+                <p class="subtitle is-6">Urban Exploration by Alex Turner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 8 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="vintage car.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Vintage Vibes</p>
+                <p class="subtitle is-6">Nostalgia Captured by Mia Anderson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 9 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="ocean.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Ocean Dreams</p>
+                <p class="subtitle is-6">Seascape Beauty by Liam Parker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 10 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="eternal spring.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Eternal Spring</p>
+                <p class="subtitle is-6">Timeless Style by Olivia White</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 11 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="giant wheel.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Serendipity Moments</p>
+                <p class="subtitle is-6">Unexpected Beauty by Ethan Turner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Card 12 -->
+      <div class="column is-one-third">
+        <div class="card gallery-card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="taj mahal.jpg" alt="Placeholder Image">
+            </figure>
+          </div>
+          <div class="gallery-card-content">
+            <div class="drawer">
+                <p class="title is-5">Abstract Wonders</p>
+                <p class="subtitle is-6">Artistic Exploration by Ava Miller</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="infoModal">
+  <div class="modal-background" onclick="closeModal()"></div>
+  <div class="modal-content">
+    <p class="title is-5">Modal Content Title</p>
+    <p class="subtitle is-6">Modal Content Subtitle</p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+</body>
+</html>
